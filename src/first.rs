@@ -1,6 +1,17 @@
 pub struct List {
     head: Link,
 }
+impl List {
+    pub fn new() -> Self {
+        List { head: Link::Empty }
+    }
+}
+
+impl Default for List {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 struct Node {
     elem: i32,
